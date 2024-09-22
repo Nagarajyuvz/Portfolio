@@ -1,0 +1,291 @@
+/* General Body Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Set default text color to white */
+    background-color: #000; /* Black background for the entire page */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #111; /* Darker background for navbar */
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth animation */
+}
+
+.nav-links a:hover {
+    background-color: #3498db; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #111; /* Dark background for contrast */
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    color: white;
+}
+
+.hero-section .highlight {
+    color: #3498db;
+}
+
+.hero-section p {
+    font-size: 20px;
+    color: #bbb; /* Light gray color for subtitle */
+}
+
+.hero-section .btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation */
+}
+
+.hero-section .btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale up */
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background-color: #000; /* Keep black background */
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #bbb;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+}
+
+.skill {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill h3 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.skill p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 0;
+    background-color: #000;
+}
+
+.projects-section h2 {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.project-card h3 {
+    font-size: 24px;
+    color: #3498db;
+}
+
+.project-card p {
+    color: #bbb;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card .btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: white;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #bbb;
+}
+
+footer .social-links a {
+    color: #3498db;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills, .projects-grid {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+    }
+}
