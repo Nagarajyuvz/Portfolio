@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inline-block {
+            display: inline-block;
+        }
+
+        .loader {
+            display: flex;
+            margin: 0.25em 0;
+        }
+
+        .w-2 {
+            width: 0.5em;
+        }
+
+        .dash {
+            animation: dashArray 2s ease-in-out infinite,
+                dashOffset 2s linear infinite;
+        }
+
+        @keyframes dashArray {
+            0% {
+                stroke-dasharray: 0 1 359 0;
+            }
+
+            50% {
+                stroke-dasharray: 0 359 1 0;
+            }
+
+            100% {
+                stroke-dasharray: 359 1 0 0;
+            }
+        }
+
+        @keyframes dashOffset {
+            0% {
+                stroke-dashoffset: 365;
+            }
+
+            100% {
+                stroke-dashoffset: 5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <svg height="0" width="0" viewBox="0 0 64 64" class="absolute">
+            <defs>
+                <linearGradient id="b" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+                    <stop stop-color="#973BED"></stop>
+                    <stop stop-color="#007CFF" offset="1"></stop>
+                </linearGradient>
+                <linearGradient id="c" gradientUnits="userSpaceOnUse" y2="0" x2="0" y1="64" x1="0">
+                    <stop stop-color="#FFC800"></stop>
+                    <stop stop-color="#F0F" offset="1"></stop>
+                    <animateTransform repeatCount="indefinite" keySplines=".42,0,.58,1;.42,0,.58,1;.42,0,.58,1;.42,0,.58,1;.42,0,.58,1;.42,0,.58,1;.42,0,.58,1;.42,0,.58,1" keyTimes="0; 0.125; 0.25; 0.375; 0.5; 0.625; 0.75; 0.875; 1" dur="8s" values="0 32 32;-270 32 32;-270 32 32;-540 32 32;-540 32 32;-810 32 32;-810 32 32;-1080 32 32;-1080 32 32" type="rotate" attributeName="gradientTransform"></animateTransform>
+                </linearGradient>
+                <linearGradient id="d" gradientUnits="userSpaceOnUse" y2="2" x2="0" y1="62" x1="0">
+                    <stop stop-color="#00E0ED"></stop>
+                    <stop stop-color="#00DA72" offset="1"></stop>
+                </linearGradient>
+            </defs>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#b)" d="M 10 4 V 60 M 54 4 V 60 M 10 32 H 54" class="dash" id="h" pathLength="360"></path>
+        </svg>
+        <div class="w-2"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#c)" d="M 54 4 L 10 4 L 10 60 L 54 60 M 10 32 H 54" class="dash" id="e" pathLength="360"></path>
+        </svg>
+        <div class="w-2"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#d)" d="M 10 4 L 10 60 L 54 60" class="dash" id="l1" pathLength="360"></path>
+        </svg>
+        <div class="w-2"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#b)" d="M 10 4 L 10 60 L 54 60" class="dash" id="l2" pathLength="360"></path>
+        </svg>
+        <div class="w-2"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64" height="64" width="64" class="inline-block">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" stroke="url(#c)" d="M 32 4 A 28 28 0 1 1 32 60 A 28 28 0 1 1 32 4" class="dash" id="o" pathLength="360"></path>
+        </svg>
+    </div>
+    <script>
+        // Redirect to the home page after 5 seconds
+        setTimeout(function() {
+            window.location.href = "home.html"; // Change "home.html" to your home page URL
+        }, 1500);
+    </script>
+</body>
+</html>
